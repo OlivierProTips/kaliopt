@@ -4,7 +4,8 @@
 
 #### Prerequisites
 
-* A Powerline/Nerd Font (for unicode characters) (Kali uses [Firacode](https://github.com/tonsky/FiraCode))
+* sudo apt install fonts-firacode zsh git curl
+* sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #### <ins>Steps
 

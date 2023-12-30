@@ -17,7 +17,7 @@ zsh_custom_directory="$HOME/.oh-my-zsh/custom"
 cp kaliopt.zsh-theme $zsh_custom_directory/themes
 printf "${BOLD_CYAN}\n\n[-] ${NC}Installing Theme...\n\n"
 
-plugins_list=(zsh-autosuggestions zsh-syntax-highlighting)
+plugins_list=( zsh-autosuggestions zsh-syntax-highlighting )
 for plugin in $plugins_list; do
 	if [[ ! -d "$zsh_custom_directory/plugins/${plugin}" ]]; then
 		git clone https://github.com/zsh-users/${plugin}.git $zsh_custom_directory/plugins/${plugin} --quiet
