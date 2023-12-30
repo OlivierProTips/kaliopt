@@ -34,7 +34,7 @@ if [[ ! -d $zsh_directory ]]; then
 fi
 
 cp kaliopt.zsh-theme $zsh_custom_directory/themes
-printf "${BOLD_CYAN}\n\n[-] ${NC}Installing Theme...\n\n"
+echo -e "${BOLD_CYAN}\n\n[-] ${NC}Installing Theme...\n\n"
 
 sed ${sedParam} -r -e 's/(^ZSH_THEME=).*/\1"kaliopt"/' $zsh_conf_file
 
@@ -43,7 +43,7 @@ for plugin in ${plugins_list[*]}; do
 	if [[ ! -d "$zsh_custom_directory/plugins/${plugin}" ]]; then
 		git clone https://github.com/zsh-users/${plugin}.git $zsh_custom_directory/plugins/${plugin} --quiet
 	else
-		printf "${RED}[-] ${NC}${plugin} is already installed\n"
+		echo -e "${RED}[-] ${NC}${plugin} is already installed\n"
 	fi
 
     if [[ -z $(grep -e "^plugins.*${plugin}" $zsh_conf_file) ]]; then
@@ -51,4 +51,4 @@ for plugin in ${plugins_list[*]}; do
     fi
 done
 
-printf "\n${GREEN}[✱] ${ORANGE}KALI ZSH Theme ${GREEN}Installed successfully!${NC}\n\n"
+echo -e "\n${GREEN}[✱] ${ORANGE}KALI ZSH Theme ${GREEN}Installed successfully!${NC}\n\n"
