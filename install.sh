@@ -21,6 +21,7 @@ zsh_conf_file="$HOME/.zshrc"
 # Check if ohmyzsh is installed
 if [[ ! -d $zsh_directory ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    exit
 fi
 
 cp kaliopt.zsh-theme $zsh_custom_directory/themes

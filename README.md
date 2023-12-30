@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-* sudo apt install fonts-firacode zsh git curl
+* sudo apt install fonts-firacode zsh git curl -y
 
 ### Steps
 
