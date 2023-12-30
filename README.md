@@ -1,5 +1,7 @@
 # KALI ZSH Theme 
 
+![Alt text](kalitheme.gif)
+
 ## Install
 
 ### Prerequisites
