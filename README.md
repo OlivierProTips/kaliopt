@@ -5,7 +5,6 @@
 ### Prerequisites
 
 * sudo apt install fonts-firacode zsh git curl
-* sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ### Steps
 
