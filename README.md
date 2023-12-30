@@ -10,7 +10,7 @@
 
 ### Steps
 
-1. `git clone https://github.com/OlivierProTips/kali-zsh-theme`
+1. `git clone https://github.com/OlivierProTips/kaliopt`
 2. `cd kali-zsh-theme && ./install.sh`
 3. `vi .zshrc`
 4. Change `ZSH_THEME` to `kaliopt`
