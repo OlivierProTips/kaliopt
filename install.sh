@@ -6,6 +6,7 @@ ORANGE='\033[1;33m'
 BOLD_CYAN='\033[1;36m'
 NC='\033[0m' # No Color 
 
+
 # Manage MacOS and Linux (sed is different)
 myOS=$(uname -s)
 if [[ $myOS == "Darwin" ]]; then
@@ -13,6 +14,16 @@ if [[ $myOS == "Darwin" ]]; then
 else
     sedParam="-i"
 fi
+
+# Check if zsh git and curl are installed
+prerequisite=(zsh git curl)
+errorMessage="${RED}Please install '${prerequisite[*]}' before continuing${NC}"
+for tool in ${prerequisite[*]}; do
+    if [[ ! -f $(which ${tool}) ]]; then
+        echo $errorMessage
+        exit 1
+    fi
+done
 
 zsh_directory="$HOME/.oh-my-zsh"
 zsh_custom_directory="$zsh_directory/custom"
