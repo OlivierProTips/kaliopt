@@ -6,7 +6,6 @@ ORANGE='\033[1;33m'
 BOLD_CYAN='\033[1;36m'
 NC='\033[0m' # No Color 
 
-
 # Manage MacOS and Linux (sed is different)
 myOS=$(uname -s)
 if [[ $myOS == "Darwin" ]]; then
@@ -20,7 +19,7 @@ prerequisite=(zsh git curl)
 errorMessage="${RED}Please install '${prerequisite[*]}' before continuing${NC}"
 for tool in ${prerequisite[*]}; do
     if [[ ! -f $(which ${tool}) ]]; then
-        echo $errorMessage
+        echo -e $errorMessage
         exit 1
     fi
 done
